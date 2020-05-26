@@ -51,7 +51,7 @@ export default function Home({ navigation }) {
               style={styles.imageButton}
               source={require('../assets/home/1.png')}
             />
-            <Text style={styles.button1}>THI SÁT HẠNH</Text>
+            <Text style={styles.button1}>THI SÁT HẠCH</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button2}
@@ -83,7 +83,7 @@ export default function Home({ navigation }) {
               style={styles.imageButton}
               source={require('../assets/home/4.png')}
             />
-            <Text style={styles.button1}>MẸO THIẾT QUẢ CAO</Text>
+            <Text style={styles.button1}>MẸO THI QUẢ CAO</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button2}
