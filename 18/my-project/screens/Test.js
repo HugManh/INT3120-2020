@@ -1,191 +1,75 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
+import { SafeAreaView, Dimensions, View, StyleSheet, Text } from 'react-native';
+
+var GridListItems = [
+  {
+    id: 1,
+  },
+  {
+    id: 2,
+  },
+  {
+    id: 3,
+  },
+  {
+    id: 4,
+  },
+  {
+    id: 5,
+  },
+  {
+    id: 6,
+  },
+  {
+    id: 8,
+  },
+  {
+    id: 9,
+  },
+  {
+    id: 10,
+  },
+  {
+    id: 11,
+  },
+  {
+    id: 12,
+  },
+  {
+    id: 13,
+  },
+];
+var { width } = Dimensions.get('window');
 
 export default class Test extends Component {
+  renderTest = (item) => {
+    return (
+      <TouchableOpacity
+        style={[{ width: width / 3 }, { height: width / 3 }, { padding: 15 }]}
+        onPress={() => this.props.navigation.navigate('ListTest')}
+      >
+        <View style={styles.button6}>
+          <Text style={styles.button8}>Đề số {item.id}</Text>
+          <Text style={styles.button7}>0/20 câu</Text>
+        </View>
+        <Text style={styles.button1}>Làm bài</Text>
+      </TouchableOpacity>
+    );
+  };
   render() {
     return (
-      <View style={styles.gridList}>
-        <View style={styles.button}>
-          <TouchableOpacity
-            style={styles.button2}
-            onPress={() => this.props.navigation.navigate('Test')}
-          >
-            <Text style={styles.button1}>Làm bài</Text>
-            <View style={styles.button6}>
-              <Text style={styles.button7}>0/20 câu</Text>
-              <Text style={styles.button8}>Đề số 1</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.button2}
-            onPress={() => this.props.navigation.navigate('Learn')}
-          >
-            <Text style={styles.button1}>Làm bài</Text>
-            <View style={styles.button6}>
-              <Text style={styles.button7}>0/20 câu</Text>
-              <Text style={styles.button8}>Đề số 2</Text>
-            </View>
-          </TouchableOpacity>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 3</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.button}>
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 4</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 5</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 6</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.button}>
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 7</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 8</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 9</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.button}>
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 10</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 11</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ flexGrow: 1 }}>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => this.props.navigation.navigate('Setting')}
-            >
-              <Text style={styles.button1}>Làm bài</Text>
-              <View style={styles.button6}>
-                <Text style={styles.button7}>0/20 câu</Text>
-                <Text style={styles.button8}>Đề số 12</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-        {/* <FlatList
-                    data={ this.state.GridListItems }
-                    renderItem={ ({item}) =>
-                      <View style={styles.GridViewContainer}>
-                        <Image />
-                        <Text style={styles.GridViewTextLayout} onPress={this.GetGridViewItem.bind(this, item.key)} > {item.key} </Text>
-                      </View> }
-                    numColumns={3}
-                /> */}
-      </View>
+      <SafeAreaView>
+        <FlatList
+          data={GridListItems}
+          renderItem={({ item }) => <View>{this.renderTest(item)}</View>}
+          numColumns={3}
+        />
+      </SafeAreaView>
     );
   }
 }
 const styles = StyleSheet.create({
-  gridList: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: 20,
-  },
-
-  button: {
-    flexDirection: 'row',
-    height: '22%',
-    justifyContent: 'space-between',
-  },
   button2: {
     backgroundColor: '#fff',
     flexGrow: 1,
@@ -199,21 +83,23 @@ const styles = StyleSheet.create({
   button1: {
     top: '22%',
     fontSize: 20,
-    color: 'green',
+    color: '#fff',
     textAlign: 'center',
+    backgroundColor: 'green',
   },
   button6: {
     top: '22%',
     backgroundColor: '#fff',
-    paddingHorizontal: 20,
     paddingVertical: 10,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
   },
   button7: {
     fontSize: 10,
     textAlign: 'center',
   },
   button8: {
-    fontSize: 15,
+    fontSize: 20,
     textAlign: 'center',
   },
 });

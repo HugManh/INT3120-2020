@@ -24,7 +24,7 @@ export default class Skill extends Component {
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={{ paddingTop: 20 }}>
         <FlatList
           data={this.state.ListItems}
           renderItem={({ item }) => (

@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  View,
-  Image,
-  Dimensions,
-  ImageBackground,
-  StyleSheet,
-} from 'react-native';
+import { View, ImageBackground, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {
   createDrawerNavigator,
-  DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
 
@@ -56,11 +49,6 @@ function MyDrawer() {
         itemStyle: { width: 500 },
       }}
     >
-      {/* <Drawer.Screen
-        name="Screens"
-        component={MyStack}
-        options={{ gestureEnabled: true }}
-      /> */}
       <Drawer.Screen
         name="Home"
         component={MyStackHome}
@@ -68,13 +56,6 @@ function MyDrawer() {
           drawerLabel: 'Học bằng lái xe',
           unmountOnBlur: true,
           drawerIcon: ({ activeTintColor }) => (
-            // <Image
-            //   source={{
-            //     uri:
-            //       'https://i.pinimg.com/564x/00/60/7d/00607d58a568323d72402cae2c7a548c.jpg',
-            //   }}
-            //   style={[styles.icon, { activeTintColor: activeTintColor }]}
-            // />
             <Icon size={30} color={activeTintColor} name="car" />
           ),
         }}

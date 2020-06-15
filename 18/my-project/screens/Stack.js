@@ -10,6 +10,7 @@ import Rules from './Rules';
 import Tips from './Tips';
 import Taplo from './Taplo';
 import Hide from './hide';
+import ListTest from './ListTest/List';
 //Ngăn xếp các màn hình
 const Stack = createStackNavigator();
 
@@ -87,12 +88,18 @@ function MyStackHome({ navigation }) {
           title: 'Đèn cảnh báo trên taplo Ô tô',
         }}
       />
-
       <Stack.Screen
         name="Hide"
         component={Hide}
         options={{
           title: 'Khái niệm và quy tắc',
+        }}
+      />
+      <Stack.Screen
+        name="ListTest"
+        component={ListTest}
+        options={{
+          title: 'Làm bài',
         }}
       />
     </Stack.Navigator>
